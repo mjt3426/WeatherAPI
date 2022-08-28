@@ -7,6 +7,9 @@
 
 # testing
 /coverage
+/src/privateVariables.js
+/src/privateVariables.env
+
 
 # production
 /build
@@ -27,3 +30,6 @@ yarn-error.log*
 .env
 .env.build
 .vercel
+/privateVariables.env
+
+.fake
