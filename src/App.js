@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import gmaps_apikey from './privateVariables.env';
+import {url} from 'src\parsing.js';
+import {destination_address} from 'src\webInput.js';
+import {origin_address} from 'src\webInput.js';
+require('dotenv').config({path:'\privateVariables.env'});
+import gmaps_apikey from '\privateVariables.env';
+import apiDest from 'parsing.js';
+import apiOrig from 'parsing.js';
 
 
 
@@ -22,7 +28,7 @@ function App() {
           </ul>
         <code>src/App.js</code> and save to reload.
         </p>
-        <iframe src="https://www.google.com/maps/embed/v1/directions?key=${gmaps_apikey}&origin=${apiOrig}&destination=${apiDest}&avoid=tolls" title="Directions">Frame Body</iframe>
+        <iframe src={url} title="Directions">Frame Body</iframe>
         <a
           className="App-link"
           href="https://reactjs.org"
