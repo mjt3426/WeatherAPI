@@ -1,7 +1,8 @@
 require('dotenv').config({path:'./privateVariables.env'});
 import gmaps_apikey from 'src\privateVariables.env';
+const apiKey =process.env.gmaps_apikey;
 
-function way_input(q,r,s,t,u){
+function way_input(q){
     var q = document.getElementById($(q));
     var r = document.getElementById($(r));
     var s = document.getElementById($(s));
@@ -11,14 +12,12 @@ function way_input(q,r,s,t,u){
     console.log(q+r+s+t+u);
 };
 
-way_input(dest_house, dest_street, dest_city, dest_state,dest_zip);
-
-way_input(orig_house, orig_street, orig_city, orig_state,orig_zip);
-
+//way_input(dest_house, dest_street, dest_city, dest_state,dest_zip);
+//way_input(orig_house, orig_street, orig_city, orig_state,orig_zip);
 
 function setWay(x){
     var y = x.substring(0,3);
-    $address = (x+"_address");
+    $address.name = {x}+"_address";
     var $address = []
         y+"_house"[0];
         y+"_street"[1];
@@ -28,8 +27,8 @@ function setWay(x){
 return $address;
 };
 
-seyWay("destination");
-setWay("origin");
+//setWay("destination");
+//setWay("origin");
 
 
 export var destination_address;

@@ -18,8 +18,8 @@ orig=input("Where from: ")
 apiOrig=(orig.replace(",","").replace(" ","+").replace(" St","Street").replace(" Dr","Drive").replace(".",""))
 print(apiOrig)
 
-#url = "https://maps.googleapis.com/maps/api/directions/json?origin="+apiOrig+"&destination="+apiDest+"&avoid=tolls&key="+apiKey
-url = "https://www.google.com/maps/embed/v1/directions?"+apiKey+"&origin="+apiOrig+"&destination"+apiDest+"&avoid=tolls"
+url = "https://maps.googleapis.com/maps/api/directions/json?origin="+apiOrig+"&destination="+apiDest+"&avoid=tolls&key="+apiKey
+#url = "https://www.google.com/maps/embed/v1/directions?"+apiKey+"&origin="+apiOrig+"&destination"+apiDest+"&avoid=tolls"
 
 payload={}
 headers = {}
